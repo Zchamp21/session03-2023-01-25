@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <meta charset="UTF-8">
+    <title>My super cool amazing website, ultra deluxe edition</title>
+    <!-- <script src="{{ url_for('static', filename='index.js') }}"></script> -->
+  </head>
+  <body>
+    <h1>Papa Roach Fan Page</h1>
+    <div id="divFlex">
+        <div id="divGuests">
+            <div>
+                <h2>About Papa Roach</h2>
+                For more information: <a href="https://en.wikipedia.org/wiki/Papa_Roach">click here</a>
+            </div>
+
+            <div>
+                <h2>What's Your Favorite Record?</h2>
+                <form method="post" action="/add_guest">
+                    <label for="guest">Your Name: </label>
+                    <input type="textbox" id="guest" name="guest" placeholder="Enter your name">
+                    <br>
+                    <label for="record">Record Name: </label>
+                    <input type="textbox" id="record" name="record" placeholder="Enter your favorite Papa Roach record">
+                    <br>
+                    <button id="submit" type="submit">Submit</button>
+                </form>
+                <ul id="albumList">
+                    {% for entry in entries %}
+                        <li>{{ entry[0] }}: {{ entry[1] }}</li>
+                    <!-- <li>Zach Champlin (Me): The Connection</li> -->
+                    {% endfor %}
+                </ul>
+            </div>
+            
+        </div>
+        <div id="divAlbums">
+            <h2>Papa Roach Records</h2>
+            <div id="flexAlbums">
+                <div id="albums">
+                    <img src="{{ url_for('static', filename='images/infest.jpg') }}" alt="Infest">
+                    <p id="albumName">Infest</p>
+                </div>
+                <div id="albums">
+                    <img src="{{ url_for('static', filename='images/lovehatetragedy.jpg') }}" alt="Love Hate Tragedy">
+                    <p id="albumName">Love Hate Tragedy</p>
+                </div>
+                <div id="albums">
+                    <img src="{{ url_for('static', filename='images/gettingawaywithmurder.jpg') }}" alt="Getting Away With Murder">
+                    <p id="albumName">Getting Away With Murder</p>
+                </div>
+                <div id="albums">
+                    <img src="{{ url_for('static', filename='images/theparamoursessions.jpg') }}" alt="The Paramour Sessions">
+                    <p id="albumName">The Paramour Sessions</p>
+                </div>
+                <div id="albums">
+                    <img src="{{ url_for('static', filename='images/metamorphosis.jpg') }}" alt="Metamorphosis">
+                    <p id="albumName">Metamorphosis</p>
+                </div>
+                <div id="albums">
+                    <img src="{{ url_for('static', filename='images/timeforannihilation.jpg') }}" alt="Time For Annihilation">
+                    <p id="albumName">Time For Annihilation</p>
+                </div>
+                <div id="albums">
+                    <img src="{{ url_for('static', filename='images/theconnection.jpg') }}" alt="The Connection">
+                    <p id="albumName">The Connection</p>
+                </div>
+                <div id="albums">
+                    <img src="{{ url_for('static', filename='images/fear.jpg') }}" alt="F.E.A.R">
+                    <p id="albumName">F.E.A.R</p>
+                </div>
+                <div id="albums">
+                    <img src="{{ url_for('static', filename='images/crookedteeth.jpg') }}" alt="Crooked Teeth">
+                    <p id="albumName">Crooked Teeth</p>
+                </div>
+                <div id="albums">
+                    <img src="{{ url_for('static', filename='images/whodoyoutrust.jpg') }}" alt="Who Do You Trust?">
+                    <p id="albumName">Who Do You Trust?</p>
+                </div>
+                <div id="albums">
+                    <img src="{{ url_for('static', filename='images/egotrip.jpg') }}" alt="Ego Trip">
+                    <p id="albumName">Ego Trip</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

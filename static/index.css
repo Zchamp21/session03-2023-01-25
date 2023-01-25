@@ -1,0 +1,55 @@
+body {
+    background-color: azure;
+    color: navy;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+div#divFlex {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+div#divGuests {
+    background-color:lightblue;
+    width: 30%;
+    height: auto;
+    padding-left: 0.5em;
+    /* text-align: center; */
+}
+
+div#divAlbums {
+    background-color: lightblue;
+    width: 70%;
+    height: auto;
+    /* text-align: center; */
+}
+
+div h2 {
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+input {
+    width: 98%;
+}
+
+div#flexAlbums {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+div#albums {
+    display: inline;
+}
+
+p#albumName {
+    text-align: center;
+    margin: 0.5em;
+}
